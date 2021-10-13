@@ -9,7 +9,7 @@
 ## Introducción
 
 Repositorio dedicado a la creación de diferentes ejemplos en Android+/Java/Klotin).
- - [MVN+JAVA](mvc/MVC_JAVA.md)
+ - [MVN+JAVA](mvc)
 
 Repositorio dedicado a ejemplos de Android
 
