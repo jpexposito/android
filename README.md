@@ -3,7 +3,7 @@
 # App MVC Lluvia de Ideas
 
 <div align="center">
-  <img src="https://i02.appmifile.com/images/2019/08/25/f78b7213-5fa0-4bd2-b704-74424d5dc0e6.png" width="400px" >
+  <img src="https://coworkingfy.com/wp-content/uploads/2020/01/grupo-personas-aportando-ideas-reunion-1024x612.jpg" width="600px" >
 </div>
 
 ## Introducción
