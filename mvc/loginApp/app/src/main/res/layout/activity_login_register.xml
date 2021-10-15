@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".LoginRegisterActivity">
 
     <LinearLayout
         android:orientation="vertical"
@@ -15,7 +15,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Login Form"/>
+            android:text="Crear Usuario"/>
 
         <EditText
             android:id="@+id/email"
@@ -31,17 +31,12 @@
             android:layout_margin="20dp"
             android:hint="Password"/>
 
-        <Button
-            android:id="@+id/loginb"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Login" />
 
         <Button
-            android:id="@+id/crearuser"
+            android:id="@+id/registraruser"
             android:layout_width="119dp"
             android:layout_height="wrap_content"
-            android:text="Crear" />
+            android:text="Registrar Usuario" />
 
     </LinearLayout>
 

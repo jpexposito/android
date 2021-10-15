@@ -9,8 +9,6 @@ public class UserContract {
 
     public static abstract class UserEntry implements BaseColumns {
         public static final String TABLE_NAME ="user";
-
-        public static final String ID = "id";
         public static final String EMAIL = "email";
         public static final String PASSWORD = "password";
     }

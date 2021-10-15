@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity implements ILoginView {
 
     EditText email,password;
     Button loginb;
+    Button crearuser;
     ILoginController loginPresenter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +30,17 @@ public class MainActivity extends AppCompatActivity implements ILoginView {
             public void onClick(View v) {
                 loginPresenter.OnLogin(email.getText().toString().trim(),password.getText().toString().trim());
             }
+        });
+
+        crearuser = (Button) findViewById(R.id.crearuser);
+        //loginPresenter = new LoginController(this);
+        crearuser.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setContentView(R.layout.activity_login_register);
+                //loginPresenter.OnLogin(email.getText().toString().trim(),password.getText().toString().trim());
+            }
+
         });
     }
     @Override

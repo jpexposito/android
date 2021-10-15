@@ -1,11 +1,14 @@
 package es.system.jpexposito.model;
 
+import android.content.ContentValues;
 import android.text.TextUtils;
 import android.util.Patterns;
 
+import es.system.jpexposito.model.contract.UserContract;
+
 public class User implements IUser{
 
-    private  String email,password;
+    private  String id, email,password;
 
     /**
      * Constructor de la clase User
@@ -47,5 +50,32 @@ public class User implements IUser{
             return 3;
         else
             return -1;
+    }
+
+    /**
+     * Funcion encargada en transformar el valor del objeto en un ContentValues
+     * @return ContentValues con el valor del objeto
+     */
+    public ContentValues toContentValues() {
+        ContentValues values = new ContentValues();
+        values.put(UserContract.UserEntry.EMAIL, email);
+        values.put(UserContract.UserEntry.PASSWORD, password);
+        return values;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 }
