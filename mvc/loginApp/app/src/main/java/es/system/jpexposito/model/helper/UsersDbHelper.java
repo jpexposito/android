@@ -10,11 +10,10 @@ import es.system.jpexposito.model.User;
 import es.system.jpexposito.model.contract.UserContract;
 
 
-public class UsersDbHelper extends SQLiteOpenHelper {
-    public static final int DATABASE_VERSION = 1;
-    public static final String DATABASE_NAME = "Users.db";
+public class UsersDbHelper extends ComunDbHelper {
+
     public UsersDbHelper(Context context) {
-        super(context, DATABASE_NAME, null, DATABASE_VERSION);
+        super(context);
     }
 
     /**
@@ -42,12 +41,9 @@ public class UsersDbHelper extends SQLiteOpenHelper {
      * en la BBDD
      */
     public long save(User user) {
-        SQLiteDatabase sqLiteDatabase = getWritableDatabase();
-
-        return sqLiteDatabase.insert(
-                UserContract.UserEntry.TABLE_NAME,
-                null,
+        return super.save(UserContract.UserEntry.TABLE_NAME,
                 user.toContentValues());
+
     }
 
     /**
@@ -55,16 +51,9 @@ public class UsersDbHelper extends SQLiteOpenHelper {
      * @return Todos los elementos de la BBDD
      */
     public Cursor getAll() {
-        return getReadableDatabase()
-                .query(
-                        UserContract.UserEntry.TABLE_NAME,
-                        null,  // Lista de Columnas a consultar
-                        null,  // Columnas para la clausula WHERE
-                        null,  // Valores a comparar con las columnas del WHERE
-                        null,  // Agrupar con GROUP BY
-                        null,  // Condición HAVING para GROUP BY
-                        null  // Clausula ORDER BY
-                );
+
+        return super.getAll(UserContract.UserEntry.TABLE_NAME,null, null, null,
+                null, null, null);
     }
 
     /**
@@ -73,15 +62,13 @@ public class UsersDbHelper extends SQLiteOpenHelper {
      * @return cursor con el elemento
      */
     public Cursor getById(String email) {
-        Cursor cursor = getReadableDatabase().query(
-                UserContract.UserEntry.TABLE_NAME,
+        return super.getAll(UserContract.UserEntry.TABLE_NAME,
                 null,
                 UserContract.UserEntry.EMAIL + " LIKE ?",
                 new String[]{email},
                 null,
                 null,
                 null);
-        return cursor;
     }
 
     /**
@@ -90,10 +77,7 @@ public class UsersDbHelper extends SQLiteOpenHelper {
      * @return valor con el resultado de la operacion
      */
     public int delete(String email) {
-        return getWritableDatabase().delete(
-                UserContract.UserEntry.TABLE_NAME,
-                UserContract.UserEntry.EMAIL + " LIKE ?",
-                new String[]{email});
+        return super.delete(UserContract.UserEntry.TABLE_NAME,email);
     }
 
     /**
@@ -104,12 +88,7 @@ public class UsersDbHelper extends SQLiteOpenHelper {
      * @return valor con el resultado de la operacion
      */
     public int update(User user, String email) {
-        return getWritableDatabase().update(
-                UserContract.UserEntry.TABLE_NAME,
-                user.toContentValues(),
-                UserContract.UserEntry.EMAIL + " LIKE ?",
-                new String[]{email}
-        );
+        return super.update(UserContract.UserEntry.TABLE_NAME, user, email);
     }
 
 }

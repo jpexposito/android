@@ -5,8 +5,9 @@ import android.text.TextUtils;
 import android.util.Patterns;
 
 import es.system.jpexposito.model.contract.UserContract;
+import es.system.jpexposito.model.inteface.IUser;
 
-public class User implements IUser{
+public class User implements IUser {
 
     private  String id, email,password;
 
