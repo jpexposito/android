@@ -4,6 +4,8 @@ import android.content.ContentValues;
 import android.text.TextUtils;
 import android.util.Patterns;
 
+import java.util.Objects;
+
 import es.system.jpexposito.model.contract.UserContract;
 import es.system.jpexposito.model.inteface.IUser;
 
@@ -78,5 +80,18 @@ public class User implements IUser {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    /**
+     * Funcion que determina si dos objetos de la clase user, son iguales
+     * @param o objeto a evuluar
+     * @return true/false con la evaluacion
+     */
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        User user = (User) o;
+        return Objects.equals(email, user.email) && Objects.equals(password, user.password);
     }
 }

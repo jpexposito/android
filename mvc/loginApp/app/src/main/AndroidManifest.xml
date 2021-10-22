@@ -10,9 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LoginApp">
         <activity
-            android:name=".activity.ActivityEjemploClase"
-            android:exported="true" />
-        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
@@ -22,7 +19,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".LoginRegisterActivity"
+            android:name=".activity.LoginRegisterActivity"
             android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

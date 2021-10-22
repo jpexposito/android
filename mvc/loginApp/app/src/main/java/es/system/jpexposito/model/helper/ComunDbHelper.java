@@ -6,11 +6,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import es.system.jpexposito.model.User;
-import es.system.jpexposito.model.contract.UserContract;
-
 public class ComunDbHelper extends SQLiteOpenHelper {
-
 
     public static final int DATABASE_VERSION = 1;
     public static final String DATABASE_NAME = "notas.db";
@@ -39,6 +35,12 @@ public class ComunDbHelper extends SQLiteOpenHelper {
         // No hay operaciones
     }
 
+    /**
+     * Metodo encargado de realizar la operacion de insercion en la tabla
+     * @param table
+     * @param values
+     * @return
+     */
     public long save(String table, ContentValues values) {
         SQLiteDatabase sqLiteDatabase = getWritableDatabase();
 
@@ -47,13 +49,6 @@ public class ComunDbHelper extends SQLiteOpenHelper {
                 null,
                 values);
     }
-
-    /**
-     * Funcion encargada de retornar todos los elementos de la BBDD
-     * @param table
-     * @return Todos los elementos de la BBDD
-     */
-
 
     /**
      * Funcion encargada de retornar todos los elementos de la BBDD
@@ -66,8 +61,11 @@ public class ComunDbHelper extends SQLiteOpenHelper {
      * @param orderBy Clausula ORDER BY
      * @return
      */
-    public Cursor getAll(String table, String[] columns, String selection,
-                         String[] selectionArgs, String groupBy, String having,
+    public Cursor getAll(String table, String[] columns,
+                         String selection,
+                         String[] selectionArgs,
+                         String groupBy,
+                         String having,
                          String orderBy) {
 
         return getReadableDatabase()
@@ -83,29 +81,38 @@ public class ComunDbHelper extends SQLiteOpenHelper {
     }
 
     /**
-     * Funcion encargada en eliminar un elemento de la BBBDD
-     * @param email identificador de consulta de la BBDD
-     * @return valor con el resultado de la operacion
+     * Funcion encargada de realizar la eleminancion de un elemento de la BBDD
+     * @param table sobre la que se realiza la operacion
+     * @param clausulaWhere clausula where
+     * @param whereCampos campos de la clausula
+     * @return entero con el resultado de la operacion
      */
-    public int delete(String table, String email) {
+    public int delete(String table,
+                      String clausulaWhere,
+                      String[] whereCampos) {
         return getWritableDatabase().delete(
                 table,
-                UserContract.UserEntry.EMAIL + " LIKE ?",
-                new String[]{email});
+                clausulaWhere,
+                whereCampos
+        );
     }
+
     /**
-     * Funcion encargada de realizar la actualizacion de un elemento
-     * de la BBDD
-     * @param user Usuario con los datos a actualizar
-     * @param email para la busqueda del usuario
-     * @return valor con el resultado de la operacion
+     * Funcion encargada de realizar la actualizacion de un elemento de la BBDD
+     * @param table sobre la que se realiza la operacion
+     * @param contentValues valores a actualizar
+     * @param clausulaWhere clausula where
+     * @param whereCampos campos de la clausula
+     * @return entero con el resultado de la operacion
      */
-    public int update(String table, User user, String email) {
+    public int update(String table, ContentValues contentValues,
+                      String clausulaWhere,
+                      String[] whereCampos) {
         return getWritableDatabase().update(
-                UserContract.UserEntry.TABLE_NAME,
-                user.toContentValues(),
-                UserContract.UserEntry.EMAIL + " LIKE ?",
-                new String[]{email}
+                table,
+                contentValues,
+                clausulaWhere,
+                whereCampos
         );
     }
 

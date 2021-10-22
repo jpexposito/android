@@ -7,7 +7,7 @@ import android.provider.BaseColumns;
  */
 public class IdeaContract {
 
-    public static abstract class UserEntry implements BaseColumns {
+    public static abstract class IdeaEntry implements BaseColumns {
         public static final String TABLE_NAME ="idea";
         public static final String IDUSER = "idUser";
         public static final String DESCRIPCION = "descripcion";
