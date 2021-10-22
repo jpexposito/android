@@ -1,4 +1,4 @@
-package es.system.jpexposito.model;
+package es.system.jpexposito.vo;
 
 import android.content.ContentValues;
 

@@ -9,13 +9,13 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import es.system.jpexposito.model.User;
+import es.system.jpexposito.vo.User;
 import es.system.jpexposito.model.contract.UserContract;
 
 
-public class UsersDbHelper extends ComunDbHelper {
+public class UserDbHelper extends ComunDbHelper {
 
-    public UsersDbHelper(Context context) {
+    public UserDbHelper(Context context) {
         super(context);
     }
 
@@ -94,7 +94,7 @@ public class UsersDbHelper extends ComunDbHelper {
         try {
             cursor = super.getAll(UserContract.UserEntry.TABLE_NAME,
                     null,
-                    UserContract.UserEntry.EMAIL + " LIKE ?",
+                    UserContract.UserEntry.EMAIL + " = ?",
                     new String[]{email},
                     null,
                     null,
@@ -122,7 +122,7 @@ public class UsersDbHelper extends ComunDbHelper {
      */
     public int delete(String email) {
         return super.delete(UserContract.UserEntry.TABLE_NAME,
-                UserContract.UserEntry.EMAIL + " LIKE ?",
+                UserContract.UserEntry.EMAIL + " = ?",
                 new String[]{email});
     }
 
@@ -136,7 +136,7 @@ public class UsersDbHelper extends ComunDbHelper {
     public int update(User user, String email) {
         return super.update(UserContract.UserEntry.TABLE_NAME,
                 user.toContentValues(),
-                UserContract.UserEntry.EMAIL + " LIKE ?",
+                UserContract.UserEntry.EMAIL + " = ?",
                 new String[]{email});
     }
 

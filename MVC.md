@@ -1,3 +1,5 @@
+<div align="justify">
+
 # MVC
 
   La aplicación va estar estructurada bajo el __modelo-vista-controlador__.
@@ -15,7 +17,6 @@
 ```console
   es.system.jpexposito.view
 ```
-
 
   - Controlador. Un controlador no es más que el responsable de controlar las acciones que se realizan con el fin de que la información que llega a la capa de modelo/vista cumpla una serie de requerimientos o validaciones, así como formatos.
   Un ejemplo sería _Un controlador recibe la entrada, la valida y pasa la entrada validada al modelo._
@@ -79,4 +80,21 @@ __Recuerda siempre utilizar identificadores con valores descriptivos, que sean f
 ```
   Podemos observar como estamos conectando nuestro botón, con nuestra vista, y con el evento _onClick_.
 
+## Construyendo la BBDD, y sus métodos.
+
+  Una vez que hemos creado la estructura de nuestro proyecto en __android__, vamos a realizar la definición de las tablas de la _BBDD_, sus _tablas_ y _operaciones_.
+
+  Para ellos hemos transformado la estructura inicial añadiendo, los siguientes paquetes:
+    - __contract__. Contrato de las diferentes tablas de la __BBDD__.
+    - __helper__. Operaciones que se realizan dentro de cada una de las tablas.
+    - __interface__. Operaciones definidas y obligatorias, inicialmente sólo contendrá el método _isValid()_.
+
+    Estos tres paquetes estarán contenidos en el paquete __es.system.jpexposito.model__.
+
+    Se ha creado un nuevo paquete, __es.system.jpexposito.vo__, que tendrá almacenado los objetos obtenidos desde la interfaz de usuario, y mediante los cuales se interactúa en con la _app_.
+  
+
   __No obstante, puedes copiar el ejemplo, y probarlo para comprender su funcionamiento y llevar el comportamiento a tu proyecto__.
+
+
+</div>

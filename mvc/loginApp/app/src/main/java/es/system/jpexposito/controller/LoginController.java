@@ -1,6 +1,6 @@
 package es.system.jpexposito.controller;
 
-import es.system.jpexposito.model.User;
+import es.system.jpexposito.vo.User;
 import es.system.jpexposito.view.ILoginView;
 
 public class LoginController implements ILoginController {

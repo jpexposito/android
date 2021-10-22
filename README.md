@@ -13,7 +13,9 @@
 ## Pasos
 
   - [Definición de la arquitectura](MVC.md).
+  - [Inclyendo test en la App](TEST.md).
+<!--
   - [Creación de Layouts y sus tipos](LAYOUTS.md).
-
+-->
 
 <div>  

@@ -9,7 +9,7 @@ import java.util.List;
 
 import es.system.jpexposito.vo.User;
 
-public class ModelUserUnitTest extends ComunUtilsTest{
+public class ModelIdeaUnitTest extends ComunUtilsTest{
 
     @Test
     public void finfUserTest(){
