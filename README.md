@@ -18,4 +18,7 @@
   - [Creación de Layouts y sus tipos](LAYOUTS.md).
 -->
 
+## Referencias
+  - [Tipo de Test en Android](https://developer.android.com/studio/test).
+  - [Añadir Jacoco en Android](https://medium.com/nerd-for-tech/setup-jacoco-code-coverage-with-your-multimodule-android-app-kotlin-a0f82573a1).
 <div>  
