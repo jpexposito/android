@@ -56,7 +56,6 @@ public class UserDbHelper extends ComunDbHelper {
         List<User> users = null;
         Cursor cursor = null;
 
-
         try {
             cursor = super.getAll(UserContract.UserEntry.TABLE_NAME,
                     null, null, null,
@@ -75,11 +74,8 @@ public class UserDbHelper extends ComunDbHelper {
         } catch (Exception exception) {
             // TODO: Se debe de implementar las excepciones
         } finally {
-            if (!cursor.isClosed()) {
-                cursor.close();
-            }
+            closeCursor(cursor);
         }
-
         return Collections.emptyList(); //Retornamos una lista vacia
     }
 
@@ -101,20 +97,17 @@ public class UserDbHelper extends ComunDbHelper {
                     null);
 
             if(cursor.moveToFirst()){
+                @SuppressLint("Range") String id = cursor.getString(cursor.getColumnIndex(UserContract.UserEntry._ID));
                 @SuppressLint("Range") String password = cursor.getString(cursor.getColumnIndex(UserContract.UserEntry.PASSWORD));
-                user = new User(email, password);
+                user = new User(id, email, password);
             }
         } catch (Exception exception) {
             // TODO: Se debe de implementar el trato de las exception
         }finally {
-            if (!cursor.isClosed()) {
-                cursor.close();
-            }
+            closeCursor(cursor);
         }
         return user;
     }
-
-
     /**
      * Funcion encargada en eliminar un elemento de la BBBDD
      * @param email identificador de consulta de la BBDD

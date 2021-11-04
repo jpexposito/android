@@ -19,7 +19,6 @@ public class IdeaDbHelper extends ComunDbHelper {
     public IdeaDbHelper(Context context) {
         super(context);
     }
-
     /**
      * Metodo encargado en crear la tabla de la BBDD
      * @param sqLiteDatabase BBDD SqLite
@@ -56,7 +55,6 @@ public class IdeaDbHelper extends ComunDbHelper {
         List<Idea> ideas = null;
         Cursor cursor = null;
 
-
         try {
             cursor = super.getAll(IdeaContract.IdeaEntry.TABLE_NAME,
                     null, null, null,
@@ -75,11 +73,8 @@ public class IdeaDbHelper extends ComunDbHelper {
         } catch (Exception exception) {
             // TODO: Se debe de implementar las excepciones
         } finally {
-            if (!cursor.isClosed()) {
-                cursor.close();
-            }
+            closeCursor(cursor);
         }
-
         return Collections.emptyList(); //Retornamos una lista vacia
     }
 
@@ -115,11 +110,8 @@ public class IdeaDbHelper extends ComunDbHelper {
         } catch (Exception exception) {
             // TODO: Se debe de implementar las excepciones
         } finally {
-            if (!cursor.isClosed()) {
-                cursor.close();
-            }
+            closeCursor(cursor);
         }
-
         return Collections.emptyList(); //Retornamos una lista vacia
     }
 
@@ -149,5 +141,4 @@ public class IdeaDbHelper extends ComunDbHelper {
                 IdeaContract.IdeaEntry._ID + " = ?",
                 new String[]{id});
     }
-
 }

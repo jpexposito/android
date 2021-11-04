@@ -116,4 +116,14 @@ public class ComunDbHelper extends SQLiteOpenHelper {
         );
     }
 
+    /**
+     * Funcion encargada de cerrar el cursor que va a la BBDD
+     * @param cursor actual sobre la BBDD
+     */
+    protected void closeCursor(Cursor cursor) {
+        if (cursor != null && !cursor.isClosed()) {
+            cursor.close();
+        }
+    }
+
 }

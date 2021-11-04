@@ -22,6 +22,18 @@ public class User implements IUser {
         this.email = email;
         this.password = password;
     }
+
+    /**
+     * Contructor con todos los parametros
+     * @param id del usuario
+     * @param email del usuario
+     * @param password del usuario
+     */
+    public User(String id, String email, String password) {
+        this.id = id;
+        this.email = email;
+        this.password = password;
+    }
     @Override
     public String getEmail() {
         return email;
