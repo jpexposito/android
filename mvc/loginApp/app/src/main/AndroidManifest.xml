@@ -18,6 +18,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <!--
         <activity
             android:name=".activity.LoginRegisterActivity"
             android:parentActivityName=".MainActivity">
@@ -25,6 +26,13 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
+        -->
+        <activity
+            android:name="es.system.jpexposito.activity.Pantalla1Activity"
+            android:label="@string/app_pantalla1" />
+        <activity
+            android:name="es.system.jpexposito.activity.Pantalla2Activity"
+            android:label="@string/app_pantalla2" />
     </application>
 
 </manifest>
