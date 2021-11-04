@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context="es.system.jpexposito.activity.Pantalla1Activity">
 
     <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="center"
-        android:gravity="center"
-        android:orientation="vertical">
+        android:gravity="center">
 
         <!--
         <EditText
@@ -41,11 +41,11 @@
             android:text="Crear" />
            -->
         <Button
-            android:id="@+id/cambioPantalla1"
+            android:id="@+id/pantallaPrincipal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="cambioPantalla1"
-            android:text="@string/pasar_pantalla_1" />
+            android:onClick="cambioPantallaSecundaria"
+            android:text="@string/pasar_pantalla_2" />
 
     </LinearLayout>
 

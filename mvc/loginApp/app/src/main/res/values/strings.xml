@@ -9,4 +9,10 @@
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
+
+    <string name="app_pantalla1">Pantalla 1</string>
+    <string name="app_pantalla2">Pantalla 2</string>
+    <string name="pasar_pantalla_1">Pasar Pantalla 1</string>
+    <string name="pasar_pantalla_2">Pasar Pantalla 2</string>
+    <string name="pasar_a_pantalla_principal">Pasar a pantalla Principal</string>
 </resources>
