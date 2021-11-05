@@ -14,26 +14,6 @@
         android:gravity="center">
 
         <!--
-        <EditText
-            android:id="@+id/email"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:hint="Email"/>
-
-        <EditText
-            android:id="@+id/password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:hint="Password"/>
-
-        <Button
-            android:id="@+id/loginb"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Login" />
-
         <Button
             android:id="@+id/crearuser"
             android:layout_width="119dp"
