@@ -15,4 +15,8 @@
     <string name="pasar_pantalla_1">Pasar Pantalla 1</string>
     <string name="pasar_pantalla_2">Pasar Pantalla 2</string>
     <string name="pasar_a_pantalla_principal">Pasar a pantalla Principal</string>
+    <string name="fragment_nombre">Esto es un fragment</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>
