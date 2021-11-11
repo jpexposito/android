@@ -1,7 +1,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".lawyerdetail.LawyerDetailActivity">
+    tools:context="es.system.jpexposito.activity.layer.detail.LawyerDetailActivity">
     <item
         android:id="@+id/action_edit"
         android:orderInCategory="1"
