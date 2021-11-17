@@ -35,6 +35,11 @@ public class LawyerDetailActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * Metodo sobrecargado que permite la creacion de un meno
+     * @param menu meno a crear
+     * @return respuesta de la creacion
+     */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_lawyer_detail, menu);
