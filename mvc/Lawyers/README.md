@@ -148,10 +148,11 @@ En el anterior código podemos notar los siguientes detalles:
   - __int version__: Entero que representa la versión de la base de datos. Su valor inicial por defecto es 1. Si en algún momento la versión es mayor se llama al método __onUpgrade()__ para actualizar la base de datos a la nueva versión. Si es menor, se llama a __downUpgrade()__ para volver a una versión previa.
 
   En el método __onCreate()__ realizaremos la llamada al método __mook__ con el objetivo de insertar datos en la __BBDD__, aunque la forma de realizarlo de forma correcta, será a través de un ___script sql___.
+  
+ 
+#### Leer Información De La Base De Datos
 
-### Leer Información De La Base De Datos
-
-#### Método query
+##### Método query
 
   Para obtener los registros de nuestra tabla usaremos el método __query()__.
 
@@ -196,7 +197,7 @@ En el anterior código podemos notar los siguientes detalles:
   );
   ```
 
-  #### Método rawQuery
+  ##### Método rawQuery
 
     Existe otro método alternativo para realizar consultas llamado __rawQuery()__. Con él pasas como parámetro un String del código SQL de la consulta.
 
