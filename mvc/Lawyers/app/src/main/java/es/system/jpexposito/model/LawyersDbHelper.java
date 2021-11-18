@@ -74,7 +74,7 @@ public class LawyersDbHelper extends SQLiteOpenHelper {
         // No hay operaciones
     }
 
-    public long saveLawyer(Lawyer lawyer) {
+    public long save(Lawyer lawyer) {
         SQLiteDatabase sqLiteDatabase = getWritableDatabase();
 
         return sqLiteDatabase.insert(
@@ -84,7 +84,7 @@ public class LawyersDbHelper extends SQLiteOpenHelper {
 
     }
 
-    public Cursor getAllLawyers() {
+    public Cursor getAll() {
         return getReadableDatabase()
                 .query(
                         LawyerEntry.TABLE_NAME,
@@ -96,7 +96,7 @@ public class LawyersDbHelper extends SQLiteOpenHelper {
                         null);
     }
 
-    public Cursor getLawyerById(String lawyerId) {
+    public Cursor getById(String lawyerId) {
         Cursor c = getReadableDatabase().query(
                 LawyerEntry.TABLE_NAME,
                 null,
@@ -108,14 +108,14 @@ public class LawyersDbHelper extends SQLiteOpenHelper {
         return c;
     }
 
-    public int deleteLawyer(String lawyerId) {
+    public int delete(String lawyerId) {
         return getWritableDatabase().delete(
                 LawyerEntry.TABLE_NAME,
                 LawyerEntry.ID + " LIKE ?",
                 new String[]{lawyerId});
     }
 
-    public int updateLawyer(Lawyer lawyer, String lawyerId) {
+    public int update(Lawyer lawyer, String lawyerId) {
         return getWritableDatabase().update(
                 LawyerEntry.TABLE_NAME,
                 lawyer.toContentValues(),

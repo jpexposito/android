@@ -128,7 +128,7 @@ public class LawyersFragment extends Fragment {
 
         @Override
         protected Cursor doInBackground(Void... voids) {
-            return mLawyersDbHelper.getAllLawyers();
+            return mLawyersDbHelper.getAll();
         }
 
         @Override

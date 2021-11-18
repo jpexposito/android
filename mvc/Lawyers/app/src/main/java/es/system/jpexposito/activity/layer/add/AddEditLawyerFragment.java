@@ -1,4 +1,4 @@
-package es.system.jpexposito.activity.layer.edit;
+package es.system.jpexposito.activity.layer.add;
 
 
 import android.app.Activity;
@@ -20,7 +20,6 @@ import com.google.android.material.textfield.TextInputLayout;
 import es.system.jpexposito.R;
 import es.system.jpexposito.model.Lawyer;
 import es.system.jpexposito.model.LawyersDbHelper;
-
 
 /**
  * Vista para creación/edición de un abogado
@@ -172,7 +171,7 @@ public class AddEditLawyerFragment extends Fragment {
 
         @Override
         protected Cursor doInBackground(Void... voids) {
-            return mLawyersDbHelper.getLawyerById(mLawyerId);
+            return mLawyersDbHelper.getById(mLawyerId);
         }
 
         @Override
@@ -193,10 +192,10 @@ public class AddEditLawyerFragment extends Fragment {
         @Override
         protected Boolean doInBackground(Lawyer... lawyers) {
             if (mLawyerId != null) {
-                return mLawyersDbHelper.updateLawyer(lawyers[0], mLawyerId) > 0;
+                return mLawyersDbHelper.update(lawyers[0], mLawyerId) > 0;
 
             } else {
-                return mLawyersDbHelper.saveLawyer(lawyers[0]) > 0;
+                return mLawyersDbHelper.save(lawyers[0]) > 0;
             }
 
         }

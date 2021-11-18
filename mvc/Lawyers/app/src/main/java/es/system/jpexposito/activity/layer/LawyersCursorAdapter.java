@@ -48,23 +48,6 @@ public class LawyersCursorAdapter extends CursorAdapter {
 
         // Setup.
         nameText.setText(name);
-        /**
-        Glide
-                .with(context)
-                .load(Uri.parse("file:///android_asset/" + avatarUri))
-                .asBitmap()
-                .error(R.drawable.ic_account_circle)
-                .centerCrop()
-                .into(new BitmapImageViewTarget(avatarImage) {
-                    @Override
-                    protected void setResource(Bitmap resource) {
-                        RoundedBitmapDrawable drawable
-                                = RoundedBitmapDrawableFactory.create(context.getResources(), resource);
-                        drawable.setCircular(true);
-                        avatarImage.setImageDrawable(drawable);
-                    }
-                });
-         **/
 
             Glide.with(context)
                 .asBitmap()

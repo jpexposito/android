@@ -151,7 +151,7 @@ public class LawyerDetailFragment extends Fragment {
 
         @Override
         protected Cursor doInBackground(Void... voids) {
-            return mLawyersDbHelper.getLawyerById(mLawyerId);
+            return mLawyersDbHelper.getById(mLawyerId);
         }
 
         @Override
@@ -169,7 +169,7 @@ public class LawyerDetailFragment extends Fragment {
 
         @Override
         protected Integer doInBackground(Void... voids) {
-            return mLawyersDbHelper.deleteLawyer(mLawyerId);
+            return mLawyersDbHelper.delete(mLawyerId);
         }
 
         @Override
