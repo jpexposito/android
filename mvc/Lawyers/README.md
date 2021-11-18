@@ -8,6 +8,19 @@
   <img src="https://www.legaltoday.com/wp-content/uploads/2020/11/abogados.jpg" width="500px" >
 </div>
 
+
+## Índice
+
+- [Introducción](https://github.com/jpexposito/android/tree/main/mvc/Lawyers#introducci%C3%B3n).
+- [Descripción](https://github.com/jpexposito/android/tree/main/mvc/Lawyers#descripci%C3%B3n).
+- [Definición del contrato en la BBDD](https://github.com/jpexposito/android/tree/main/mvc/Lawyers#definici%C3%B3n-del-contrato-de-la-base-de-datos).
+- [Clases de Interés](https://github.com/jpexposito/android/tree/main/mvc/Lawyers#clases-de-inter%C3%A9s).
+- [Librerías Externas](https://github.com/jpexposito/android/tree/main/mvc/Lawyers#librer%C3%ADas-externas).
+- [Arquitectura de la App](https://github.com/jpexposito/android/tree/main/mvc/Lawyers#arquitectura-de-la-app).
+- [Menú Android](https://github.com/jpexposito/android/tree/main/mvc/Lawyers#men%C3%BA-en-android).
+- [Listview en Android](https://github.com/jpexposito/android/tree/main/mvc/Lawyers#listview-en-android).
+
+
 ## Introducción
 
   La presente aplicación trata de explicar, diferentes conceptos de la programación en __Android__, siguiendo un modelo estructurado. Para ello, se ha utilizado la aplicación ___App Lawyers___ que se encuentra en las referencias del documentos, realizando una actualización de la misma, así como una refactorizacón de su estructura, utilizando el __MVC__, y haciendo uso del __testing__ para verificar su correcto funcionamiento, sin necesidad de tener creada la interfaz gráfica.
