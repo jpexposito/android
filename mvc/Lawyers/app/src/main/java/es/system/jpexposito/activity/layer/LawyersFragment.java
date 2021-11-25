@@ -78,7 +78,7 @@ public class LawyersFragment extends Fragment {
         });
 
 
-        getActivity().deleteDatabase(LawyersDbHelper.DATABASE_NAME);
+       // getActivity().deleteDatabase(LawyersDbHelper.DATABASE_NAME);
 
         // Instancia de helper
         mLawyersDbHelper = new LawyersDbHelper(getActivity());
