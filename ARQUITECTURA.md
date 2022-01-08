@@ -1,6 +1,6 @@
 <div align="justify">
 
-# ARQUITECTURA EN ANDROD
+# ARQUITECTURA EN ANDROID
 
   En esta sección, analizamos un caso práctico para demostrar cómo estructurar una app que hará uso de distintos recursos.
 
